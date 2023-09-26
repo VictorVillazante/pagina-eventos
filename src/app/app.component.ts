@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SpinnerService } from './services/spinner.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend-eventos';
+  constructor(private spinnerService: SpinnerService) {}
+  ngOnInit(): void {
+    this.spinnerService.show();
+    setTimeout(() => {
+      this.spinnerService.hide();
+    }, 4000);
+  }
 }
