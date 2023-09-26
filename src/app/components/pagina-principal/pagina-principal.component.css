@@ -1,0 +1,229 @@
+#contenido-inicial {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    background-color: #0e000485;
+    padding: 0;
+    margin: 0;
+}
+
+
+#contenido-inicial video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#elementos-contenido-inicial {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    /* background-color: #0e000498; */
+    display: flex;
+    flex-direction: row;
+}
+
+#elementos-contenido-inicial {
+    padding: 0;
+    margin: 0;
+    /* background: url("https://images.unsplash.com/photo-1541240290619-3f2fad86473d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+   
+}
+#contenido-presentacion{
+    background: #00000061;
+    width: 100rem !important;
+    min-width: 100vw;
+}
+#parte_imagen {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#parte_texto {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 25px;
+    text-align: center;
+    color: #201E1F;
+    background: #f0eff4eb;
+    margin: auto 5%;
+    border: 6px solid #007ea7;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#parte_texto button {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #007ea7;
+    color: white;
+}
+
+#parte_texto h1 {
+
+    /* background-image: linear-gradient(90deg, #f5f3f5, #2cf6b3, #48acf0,#52489c) !important; */
+    /* background-image: linear-gradient(90deg, #54af98, #000fe1, #ea7417, #f22c70) !important;
+    animation: mymove 5s infinite;
+    background-size: 400% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+  
+    font-size: 100px;
+    font-family: 'Boogaloo', cursive;
+    letter-spacing: 10px;
+    font-weight: 600;
+    word-spacing: 5px;
+    -webkit-text-stroke: 1px rgba(126, 126, 126, 0.692);
+    text-stroke: 1px rgba(126, 126, 126, 0.692); */
+    background-image: linear-gradient(0deg, #007EA7, #007EA7, #F0EFF4) !important;
+    /* animation: mymove 5s infinite; */
+    background-size: 400% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+    font-family: 'Boogaloo', cursive;
+    letter-spacing: 10px;
+    font-weight: 600;
+    word-spacing: 5px;
+    /* -webkit-text-stroke: 1px rgba(126, 126, 126, 0.692); */
+    animation: typing 4s steps(40) 1s 1 normal both;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes mymove {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 400%;
+    }
+}
+
+/* @-webkit-keyframes animate {
+    from {
+      background-position: 0%; }
+  
+    to {
+      background-position: 400%; } 
+  }
+  #parte_texto h1{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    background-image: linear-gradient(90deg, blue, green, red) !important;
+    background-size: 400% !important;
+    font-size: 100px;
+    font-family: sans-serif;
+    letter-spacing: 10px;
+    font-weight: 600;
+    word-spacing: 5px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text !important;
+    animation: animate 10s linear infinite !important;
+    -moz-animation: animate 10s linear infinite !important;
+    -webkit-animation: animate 2s linear infinite !important;
+    -o-animation: animate 10s linear infinite !important;
+  } */
+
+#img_perfil {
+    background-image: url('../../../assets/images/imagen_usuario_defecto.jpg');
+    background-position: center;
+    width: 500px;
+    height: 500px;
+    margin-top: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    border: 6px solid #f0eff4;
+}
+
+#redes_sociales {
+    margin-top: 20px;
+    height: 100px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    background: #e8e2e4;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    margin: 0 5px;
+    overflow: hidden;
+    position: relative;
+    animation: buttonAnimation 3s infinite alternate;
+}
+
+@keyframes buttonAnimation {
+    from {
+        width: 60px;
+        height: 60px;
+    }
+
+    to {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.social-button element {
+    font-size: 20px;
+    color: white;
+}
+
+.social-button.whatsapp {
+    background-color: #25D366;
+}
+
+.social-button.linkedin {
+    background-color: #0A66C2;
+}
+
+.social-button.github {
+    background-color: #333333;
+}
+
+.social-button.gmail {
+    background-color: #D44638;
+}
+
+.social-button.outlook {
+    background-color: #0072C6;
+}

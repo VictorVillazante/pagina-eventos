@@ -10,13 +10,17 @@ import { APP_ROUTING } from './app.routes';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { RegistrateComponent } from './components/registrate/registrate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginaPrincipalComponent,
     SpinnerComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    RegistrateComponent
   ],
   imports: [
     BrowserModule,

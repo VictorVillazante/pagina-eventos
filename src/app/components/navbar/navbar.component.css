@@ -87,11 +87,13 @@ input{
     width: 100vw;
     min-height: 80px !important;
     padding: 5px;
+    background: transparent !important;
     /* height: 80px !important; */
 }
 #input-buscador{
     width: 300px !important;
 }
+
 @media (max-width:980px) {
     #opciones_img_usuario{
         display: none;
@@ -108,4 +110,13 @@ input{
 }
 #opciones-nav{
 
+}
+
+#titulo_pagina{
+    background-image: url('../../../assets/images/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 140px;
+    height: 30px;
 }

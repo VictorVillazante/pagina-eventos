@@ -1,0 +1,63 @@
+body {
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container.mt-5{
+    margin-top: 0 !important;
+  }
+  .form-group{
+    margin-bottom: 4vh !important;
+  }
+  .card {
+    width: 100vw !important;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .card-title {
+    margin-bottom: 20px;
+  }
+  
+  .btn-outline-primary,
+  .btn-outline-danger,
+  .btn-outline-success {
+    margin-top: 10px;
+  }
+  .row{
+    overflow: inherit !important;
+  }
+  #btn-facebook{
+    color: white !important;
+    background-color: #0d6efd !important;
+    margin-bottom: 5px !important;
+  }
+  #btn-google{
+    color: white !important;
+    background-color: #e34133 !important;
+    margin-bottom: 5px !important;
+
+  }
+  #btn-cellphone{
+    color: white !important;
+    background-color: rgb(129, 214, 188) !important;
+    margin-bottom: 5px !important;
+
+  }
+  #opciones{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+  #opciones button{
+    margin: 2px;
+  }
