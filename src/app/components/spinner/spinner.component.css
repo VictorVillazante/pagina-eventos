@@ -1,0 +1,39 @@
+.gif-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 4;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding-top: 20%;
+    background: #ffffffed;
+    margin-top: -64px;
+}
+
+.gif-container img {
+    width: 15vw;
+    height: 15vw;
+    animation: infiniteLoop 1s infinite;
+}
+
+@media (max-width:980px) {
+    .gif-container {
+        padding-top: 50% !important;
+    }
+
+    .gif-container img {
+        width: 50vw !important;
+        height: 50vw !important;
+    }
+}
+
+@keyframes infiniteLoop {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

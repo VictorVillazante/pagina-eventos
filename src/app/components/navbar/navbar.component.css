@@ -1,0 +1,111 @@
+nav {
+    background-color: black !important;
+}
+
+a {
+    color: white !important;
+}
+
+#opciones_img_usuario {
+    width: auto;
+    padding: 10px !important;
+
+}
+.navbar{
+    padding: 0 !important;
+}
+#img_usuario {
+    height: 60px;
+    width: 60px;
+    margin: 0 !important;
+    margin-left: 0px;
+    background: white;
+    margin-left: 1vw !important;
+    border-radius: 100%;
+    margin: 0 auto !important;
+    
+}
+#img_usuario img{
+    border-radius: 100%;
+}
+button{
+    margin: 1vw 0 !important;
+}
+input{
+    margin: 1vw 0 !important;
+}
+#opciones_img_usuario:hover #opciones {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    position: absolute;
+    right: 17px;
+    background: white;
+    border: 2px solid black;
+    border-top-color: black;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top: 2px solid black;
+    top: 75px;
+    color: black;
+}
+#opciones_img_usuario:hover #opciones ul{
+    margin: 0 !important;
+}
+
+#opciones_img_usuario:hover #opciones ul li{
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    animation-duration: 5s;
+}
+#opciones_img_usuario:hover #opciones ul li:hover{
+    padding: 10px;
+    background: black;
+    color: white;
+    animation-duration: 5s;
+}
+#opciones {
+    color: white;
+    display: none;
+}
+
+#opciones ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 40px !important;
+}
+#opciones ul li{
+    text-align: center;
+}
+#navbar-contenedor{
+    top: 0;
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+    min-height: 80px !important;
+    padding: 5px;
+    /* height: 80px !important; */
+}
+#input-buscador{
+    width: 300px !important;
+}
+@media (max-width:980px) {
+    #opciones_img_usuario{
+        display: none;
+    }
+    #opciones_img_usuario_980{
+        display: block;
+    }
+    .w-980{
+        display: inline-block !important;
+    }
+}
+.w-980{
+    display: none;
+}
+#opciones-nav{
+
+}
