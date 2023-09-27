@@ -1,1 +1,168 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    height: 100vh !important;
+}
+
+body {
+    height: 100vh !important;
+}
+
+app-root {
+    height: 100vh !important;
+    display: inline-block;
+    width: 100vw !important
+}
+
+
+
+.evento-card {
+    position: relative;
+    padding: 10px;
+
+}
+.evento-card::before,
+.evento-card::after {
+    content: '';
+    position: absolute;
+    background-color: #28888e;
+    transition: 1s all;
+}
+
+.evento-card::before {
+    width: 5px;
+    height: 50%; 
+    top: 0;
+    left: 0;
+    animation: myAnimation 4s infinite;
+}
+
+.evento-card::after {
+    width: 50%; 
+    height: 5px; 
+    top: 0;
+    left: 0;
+}
+.evento-card:hover::before {
+    width: 5px;
+    height: 50%; 
+    top: 47%;
+    left: 0;
+}
+
+.evento-card:hover::after {
+    width: 50%; 
+    height: 5px; 
+    top: 0;
+    left: 48%;
+}
+/* @keyframes myAnimation {
+    0%{
+        width: 5px;
+        height: 10%; 
+    }
+    50%{
+        width: 5px;
+        height: 100%; 
+    }
+    100%{
+        width: 5px;
+        height: 10%; 
+        top: 90%;
+        left: 0;
+    }
+} */
+/* @keyframes myAnimation {
+    0%{
+        width: 5px;
+        height: 10%; 
+    }
+    50%{
+        width: 5px;
+        height: 100%; 
+    }
+    100%{
+        width: 5px;
+        height: 10%; 
+        top: 90%;
+        left: 0;
+    }
+} */
+.evento-card-aux {
+    position: relative;
+    padding: 30px;
+    justify-content: start !important;
+    height: fit-content;
+}
+.evento-card-aux::before,
+.evento-card-aux::after {
+    content: '';
+    position: absolute;
+    background-color: #28888e;
+    transition: 1s all;
+}
+
+.evento-card-aux::before {
+    width: 5px;
+    height: 50%; 
+    bottom: 0;
+    right: 0;
+}
+
+.evento-card-aux::after {
+    width: 50%; 
+    height: 5px; 
+    bottom: 0;
+    right: 0;
+}
+.evento-card-aux:hover::before {
+    width: 5px;
+    height: 50%; 
+    bottom: 52%;
+    right: 0;
+}
+
+.evento-card-aux:hover::after {
+    width: 50%; 
+    height: 5px; 
+    bottom: 0;
+    right: 52%;
+}
+.evento-card h1{
+    text-align: start !important;
+    color: white !important;
+    text-shadow: none;
+}
+.evento-card p{
+    text-align: start !important;
+}
+.evento-card button{
+    height: 50px;
+    border-radius: 10px;
+}
+.evento-card:hover button{
+    background-color: #28888e !important;
+}
+
+img.hover{
+    display: inline-block;
+    width: 100% !important;
+    transition: 2s all;
+}
+img.sin-hover{
+    display: none;
+    width: 100% !important;
+    transition: 2s all;
+
+}
+.evento-card-final:hover img.sin-hover{
+    display: inline-block;
+    width: 100% !important;
+    transition: 2s all;
+
+}
+.evento-card-final:hover img.hover{
+    display: none;
+    width: 100% !important;
+    transition: 2s all;
+
+}

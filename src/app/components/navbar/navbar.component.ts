@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
 
   nombreEventoBuscar: any = "";
   buscarEvento() {
-    this.router.navigate(['/buscador-cursos', this.nombreEventoBuscar]);
+    this.router.navigate(['/buscador-eventos', this.nombreEventoBuscar]);
   }
   logout() {
 

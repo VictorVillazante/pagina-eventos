@@ -1,0 +1,10 @@
+.container {
+    margin-top: 10vh;
+    justify-content: center;
+}
+.form-group{
+    margin-bottom: 30px;
+}
+h1{
+    text-align: center;
+}

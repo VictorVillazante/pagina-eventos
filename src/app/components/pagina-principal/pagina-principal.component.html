@@ -1,13 +1,169 @@
 <!-- <app-spinner></app-spinner> -->
-<div id="contenido-inicial" class="jumbotron text-center">
-  <video [autoplay]="true" [loop]="true" [muted]="true">
-    <source src="../../../assets/videos/fondo.mp4" type="video/mp4" >
-  </video>
+<div style="height: auto; overflow: scroll">
+  <div id="contenido-inicial">
+    <video [autoplay]="true" [loop]="true" [muted]="true">
+      <source src="../../../assets/videos/fondo.mp4" type="video/mp4" />
+    </video>
 
-  <div class="container" id="elementos-contenido-inicial">
-   
-    <div class="row" id="contenido-presentacion">
-      <h1></h1>
+    <div class="container" id="elementos-contenido-inicial">
+      <div id="contenido-presentacion">
+        <h1
+          style="
+            font-size: 15vw;
+            text-align: start;
+            height: fit-content !important;
+            padding: 0;
+            margin-bottom: 40px;
+            text-shadow: 8px 8px 16px rgb(255, 255, 255);
+          "
+        >
+          EventXcited
+        </h1>
+        <p
+          style="
+            font-weight: 500;
+            font-size: 2vw;
+            height: fit-content;
+            padding: 0;
+            width: 40vw;
+          "
+        >
+          ¿Buscas la fiesta perfecta? Regístrala en EventXcited y únete a la
+          diversión
+        </p>
+        <button
+          style="
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid transparent;
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 1.3;
+            width: 12vw;
+            height: 50px;
+            border-radius: 10px;
+            background: #28888e;
+            color: white;
+          "
+        >
+          Registrate
+        </button>
+      </div>
     </div>
   </div>
+  <section id="calendario">
+    <div>
+      <h1>Eventos</h1>
+      <div
+        id="eventos-calendario"
+        style="
+          height: 800px;
+          overflow: scroll;
+          width: 80vw;
+          margin: 0 auto;
+          padding-top: 400px !important;
+        "
+      >
+        <div style="display: flex; flex-direction: row">
+          <div style="height: 2000px; width: 48vw; background: #0b141e">
+            <div class="evento-card-final">
+              <img
+                src="../../../assets/images/evento-hover.jpg"
+                alt="image"
+                class="hover"
+              />
+              <img
+                src="../../../assets/images/evento-sin-hover.png"
+                alt="image"
+                class="sin-hover"
+              />
+              <div class="evento-card">
+                <div class="evento-card-aux card">
+                  <h1
+                    style="
+                      color: #28888e !important;
+                      font-size: 2.5rem;
+                      letter-spacing: -0.03em;
+                      font-weight: 500;
+                    "
+                  >
+                    San Francisco
+                  </h1>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley
+                  </p>
+                  <h1 style="color: white !important; font-size: 1.6rem">
+                    In person @ SFJAZZ and online
+                  </h1>
+                  <h1
+                    style="
+                      color: white !important;
+                      font-size: 1.4rem;
+                      letter-spacing: -0.02em;
+                    "
+                  >
+                    Octubre5, 2023 9:00am-5:00pm PT
+                  </h1>
+                  <button>Ver detalle-></button>
+                </div>
+              </div>
+            </div>
+
+            <img
+              class="thumbnail"
+              src="../../../assets/images/img_fondo_eventos.jpeg"
+              alt="image"
+            />
+            <img
+              class="thumbnail"
+              src="../../../assets/images/img_fondo_eventos.jpeg"
+              alt="image"
+            />
+            <img
+              class="thumbnail"
+              src="../../../assets/images/img_fondo_eventos.jpeg"
+              alt="image"
+            />
+          </div>
+          <div style="height: 2000px; width: 4vw"></div>
+          <div style="height: 2000px; width: 48vw; background: #0b141e">
+            <img
+              class="thumbnail"
+              src="../../../assets/images/img_fondo_eventos.jpeg"
+              alt="image"
+            />
+            <img
+              class="thumbnail"
+              src="../../../assets/images/img_fondo_eventos.jpeg"
+              alt="image"
+            />
+            <img
+              class="thumbnail"
+              src="../../../assets/images/img_fondo_eventos.jpeg"
+              alt="image"
+            />
+            <img
+              class="thumbnail"
+              src="../../../assets/images/img_fondo_eventos.jpeg"
+              alt="image"
+            />
+            <img
+              class="thumbnail"
+              src="../../../assets/images/img_fondo_eventos.jpeg"
+              alt="image"
+            />
+            <img
+              class="thumbnail"
+              src="../../../assets/images/img_fondo_eventos.jpeg"
+              alt="image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

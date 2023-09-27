@@ -1,3 +1,6 @@
+p,h1{
+  height: fit-content !important;
+}
 body {
     background-color: #f5f5f5;
   }
@@ -5,8 +8,7 @@ body {
   .container {
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+   
   }
   .container.mt-5{
     margin-top: 0 !important;

@@ -1,1 +1,34 @@
-<p>registrate works!</p>
+<div class="container">
+    <h1>REGISTRATE</h1>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombres">Nombres:</label>
+          <input [(ngModel)]="nombres" type="text" class="form-control" id="nombres" name="nombres" required>
+        </div>
+        <div class="form-group">
+          <label for="apellidos">Apellidos:</label>
+          <input [(ngModel)]="apellidos" type="text" class="form-control" id="apellidos" name="apellidos" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input [(ngModel)]="email" type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <div class="show-password">
+          <input [(ngModel)]="contrasenia"  *ngIf="verPassword1" type="text" id="password" name="password" class="form-control" required>
+          <input [(ngModel)]="contrasenia" *ngIf="!verPassword1" type="password" id="password" name="password" class="form-control" required>
+          <input type="checkbox" (change)="showPassword()"> Mostrar contraseña
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Confirmar contraseña:</label>
+        <div class="show-password">
+          <input [(ngModel)]="confirmar_contrasenia"  *ngIf="verPassword2" type="text" id="password" name="password" class="form-control" required>
+          <input [(ngModel)]="confirmar_contrasenia" *ngIf="!verPassword2" type="password" id="password" name="password" class="form-control" required>
+          <input type="checkbox" (change)="showPassword2()"> Mostrar contraseña
+        </div>
+      </div>
+      <button (click)="registrarAlumno()" class="btn btn-primary">Registrarse</button>
+  </div>
