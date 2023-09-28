@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ParticipantesService } from '../../services/participantes.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-registrate',
@@ -17,31 +19,33 @@ export class RegistrateComponent implements OnInit {
     this.verPassword1=!this.verPassword1;
   }
   registrarAlumno() {
-    // let alumno={
-    //   nombres:this.nombres+"",
-    //   apellidos:this.apellidos+"",
-    //   email:this.email+"",
-    //   contrasenia:this.contrasenia+""
-    // }
-    // if(this.contrasenia===this.confirmar_contrasenia){
-    //   this.alumnoService.registrarAlumno(alumno).subscribe((data:any)=>{
-    //     if(data.token!=null){
-    //       Swal.fire({
-    //         title: 'Usuario registrado',
-    //         text: 'Registro de usuario exitoso',
-    //         icon: 'success',
-    //       }).then((result) => {
-    //         this.authService.user$.next(data.token);
-    //         this.router.navigate(["/menu-usuario"]);    
-    //       });
+    let participante={
+      nombres:this.nombres+"",
+      apellidos:this.apellidos+"",
+      email:this.email+"",
+      contrasenia:this.contrasenia+"",
+      habilitad:1
+    }
+    if(this.contrasenia===this.confirmar_contrasenia){
+      this.participantesService.registrarParticipante(participante).subscribe((data:any)=>{
+        if(data.token!=null){
+          this.authService.user$.next(data.token);
+
+          // Swal.fire({
+          //   title: 'Usuario registrado',
+          //   text: 'Registro de usuario exitoso',
+          //   icon: 'success',
+          // }).then((result) => {
+          //   this.authService.user$.next(data.token);
+          // });
         
 
-    //     }else{
-    //       console.log(data);
-    //     }
+        }else{
+          console.log(data);
+        }
        
-    //   })
-    // }
+      })
+    }
   }
   nombres: any="";
   apellidos:any ="";
@@ -49,7 +53,7 @@ export class RegistrateComponent implements OnInit {
   contrasenia:any="";
   confirmar_contrasenia:any="";
 
-  constructor(private router:Router) { }
+  constructor(private authService:AuthService,private router:Router,private participantesService:ParticipantesService) { }
 
   ngOnInit(): void {
   }
