@@ -1,1 +1,50 @@
-<p>eventos works!</p>
+<div class="container" id="adm-eventos">
+    <button [routerLink]="['/eventos/registrar']" class="btn btn-success m-4">
+      Crear evento
+    </button>
+    <input
+      id="input-buscador"
+      [(ngModel)]="nombreEventoBuscar"
+      class="form-control me-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      (keyup.enter)="buscarEvento()"
+    />
+    <button (click)="buscarEvento()" class="btn btn-success m-4">
+      Buscar evento
+    </button>
+  
+    <ol class="list-group list-group-numbered">
+      <li
+        *ngFor="let evento of eventos"
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">{{ evento.titulo }}</div>
+        </div>
+     
+        <button
+          class="btn btn-info m-2"
+          [routerLink]="['/actualizar-evento', evento.id_evento]"
+        >
+          Actualizar
+        </button>
+        <button
+          *ngIf="evento.habilitado"
+          class="btn btn-danger m-2"
+          (click)="deshabilitarEvento(evento.id_evento)"
+        >
+          Deshabilitar
+        </button>
+        <button
+          *ngIf="!evento.habilitado"
+          class="btn btn-success m-2"
+          (click)="habilitarEvento(evento.id_evento)"
+        >
+          Habilitar
+        </button>
+      </li>
+    </ol>
+  </div>
+  
