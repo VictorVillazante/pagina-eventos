@@ -8,7 +8,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { APP_ROUTING } from './app.routes';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ActivatedRoute } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrateComponent } from './components/registrate/registrate.component';
@@ -45,7 +45,6 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     FormsModule,
     APP_ROUTING,
     HttpClientModule,
-
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,

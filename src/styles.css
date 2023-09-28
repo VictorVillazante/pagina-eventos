@@ -13,7 +13,9 @@ app-root {
     width: 100vw !important
 }
 
-
+.evento-card-final{
+    margin: 20px;
+}
 
 .evento-card {
     position: relative;
@@ -42,14 +44,14 @@ app-root {
     top: 0;
     left: 0;
 }
-.evento-card:hover::before {
+.evento-card-final:hover .evento-card::before {
     width: 5px;
     height: 50%; 
     top: 47%;
     left: 0;
 }
 
-.evento-card:hover::after {
+.evento-card-final:hover .evento-card::after {
     width: 50%; 
     height: 5px; 
     top: 0;
@@ -114,14 +116,14 @@ app-root {
     bottom: 0;
     right: 0;
 }
-.evento-card-aux:hover::before {
+.evento-card-final:hover .evento-card-aux::before {
     width: 5px;
     height: 50%; 
     bottom: 52%;
     right: 0;
 }
 
-.evento-card-aux:hover::after {
+.evento-card-final:hover .evento-card-aux::after {
     width: 50%; 
     height: 5px; 
     bottom: 0;
@@ -139,7 +141,7 @@ app-root {
     height: 50px;
     border-radius: 10px;
 }
-.evento-card:hover button{
+.evento-card-final:hover .evento-card button{
     background-color: #28888e !important;
 }
 

@@ -18,7 +18,7 @@ const APP_ROUTES: Routes = [
     { path: 'eventos', component:  EventosComponent},
     { path: 'eventos/registrar', component:  RegistrarEventosComponent},
     { path: 'eventos/actualizar', component:  ActualizarEventosComponent},
-    { path: 'detalles-evento', component:  DetallesEventoComponent},
+    { path: 'detalles-evento/:id', component:  DetallesEventoComponent},
     { path: 'mis-eventos', component:  MisEventosComponent},
     { path: 'buscador-eventos/:nombre', component:  BuscadorEventosComponent},
 

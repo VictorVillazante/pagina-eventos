@@ -242,6 +242,5 @@ section#calendario div{
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
     text-shadow: 8px 8px 16px rgb(255, 255, 255);
 }

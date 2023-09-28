@@ -53,7 +53,7 @@
   </div>
   <section id="calendario">
     <div>
-      <h1>Eventos</h1>
+      <h1 style="padding: 50px;">Eventos</h1>
       <div
         id="eventos-calendario"
         style="
@@ -61,22 +61,22 @@
           overflow: scroll;
           width: 80vw;
           margin: 0 auto;
-          padding-top: 400px !important;
         "
       >
         <div style="display: flex; flex-direction: row">
-          <div style="height: 2000px; width: 48vw; background: #0b141e">
-            <div class="evento-card-final">
+          <div style="width: 48vw; background: #0b141e">
+            <div class="evento-card-final" *ngFor="let evento of eventos" (click)="obtenerDetalleEvento(evento.id_evento)">
               <img
                 src="../../../assets/images/evento-hover.jpg"
-                alt="image"
+                alt=""
                 class="hover"
               />
               <img
                 src="../../../assets/images/evento-sin-hover.png"
-                alt="image"
+                alt=""
                 class="sin-hover"
               />
+
               <div class="evento-card">
                 <div class="evento-card-aux card">
                   <h1
@@ -97,7 +97,7 @@
                     printer took a galley
                   </p>
                   <h1 style="color: white !important; font-size: 1.6rem">
-                    In person @ SFJAZZ and online
+                    {{ evento.nombre_evento }}
                   </h1>
                   <h1
                     style="
@@ -106,62 +106,15 @@
                       letter-spacing: -0.02em;
                     "
                   >
-                    Octubre5, 2023 9:00am-5:00pm PT
+                    {{ evento.fecha }}
                   </h1>
                   <button>Ver detalle-></button>
                 </div>
               </div>
             </div>
-
-            <img
-              class="thumbnail"
-              src="../../../assets/images/img_fondo_eventos.jpeg"
-              alt="image"
-            />
-            <img
-              class="thumbnail"
-              src="../../../assets/images/img_fondo_eventos.jpeg"
-              alt="image"
-            />
-            <img
-              class="thumbnail"
-              src="../../../assets/images/img_fondo_eventos.jpeg"
-              alt="image"
-            />
           </div>
           <div style="height: 2000px; width: 4vw"></div>
-          <div style="height: 2000px; width: 48vw; background: #0b141e">
-            <img
-              class="thumbnail"
-              src="../../../assets/images/img_fondo_eventos.jpeg"
-              alt="image"
-            />
-            <img
-              class="thumbnail"
-              src="../../../assets/images/img_fondo_eventos.jpeg"
-              alt="image"
-            />
-            <img
-              class="thumbnail"
-              src="../../../assets/images/img_fondo_eventos.jpeg"
-              alt="image"
-            />
-            <img
-              class="thumbnail"
-              src="../../../assets/images/img_fondo_eventos.jpeg"
-              alt="image"
-            />
-            <img
-              class="thumbnail"
-              src="../../../assets/images/img_fondo_eventos.jpeg"
-              alt="image"
-            />
-            <img
-              class="thumbnail"
-              src="../../../assets/images/img_fondo_eventos.jpeg"
-              alt="image"
-            />
-          </div>
+          <div style="height: 2000px; width: 48vw; background: #0b141e"></div>
         </div>
       </div>
     </div>
