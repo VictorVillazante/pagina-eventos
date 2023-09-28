@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,10 +14,10 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/buscador-eventos', this.nombreEventoBuscar]);
   }
   logout() {
-
+    this.authService.logout();
   }
   estaLogeado: boolean = false;
-  constructor(private router: Router) { }
+  constructor(private router: Router,private authService:AuthService) { }
   carritoTamanio: any = 0;
   roles: any[] = [];
   ngOnInit(): void {

@@ -29,7 +29,19 @@ export class AuthService {
       return false;
     }
   }
-
+  logout(): void {
+        this.afAuth.signOut()
+      .then(() => {
+      
+        this.user$.next(null); 
+        this.roles$.next([]); 
+        this.email$.next(null); 
+        console.log('Cierre de sesión exitoso');
+      })
+      .catch(error => {
+        console.log('Error al cerrar sesión', error);
+      });
+  }
 
   obtenerRoles(token: any, uid: any) {
     this.firestore
