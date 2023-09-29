@@ -80,16 +80,7 @@ input{
 #opciones ul li{
     text-align: center;
 }
-#navbar-contenedor{
-    top: 0;
-    z-index: 2;
-    position: fixed;
-    width: 100vw;
-    min-height: 80px !important;
-    padding: 5px;
-    background: transparent !important;
-    /* height: 80px !important; */
-}
+
 #input-buscador{
     width: 300px !important;
 }
@@ -119,4 +110,13 @@ input{
     background-size: cover;
     width: 140px;
     height: 30px;
+}
+#navbar-contenedor{
+    top: 0;
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+    min-height: 80px !important;
+    padding: 5px;
+    background: transparent !important;
 }
