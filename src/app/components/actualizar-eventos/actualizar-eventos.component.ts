@@ -25,11 +25,12 @@ export class ActualizarEventosComponent implements OnInit {
   espacios:any[]=[];
   constructor(private activatedRoute:ActivatedRoute,private eventosService:EventosService,private espaciosService:EspaciosService) { }
   ngOnInit(): void {
+    this.espaciosService.obtenerEspacios().subscribe((r)=>{
+      this.espacios=r;
+    })
     this.activatedRoute.params.subscribe((p)=>{
       this.datosFormulario.id_evento=p.id;
-      this.espaciosService.obtenerEspacios().subscribe((r)=>{
-        this.espacios=r;
-      })
+      
     })
   }
 
