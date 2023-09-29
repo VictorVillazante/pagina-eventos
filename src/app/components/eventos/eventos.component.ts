@@ -30,7 +30,7 @@ export class EventosComponent implements OnInit {
       })
     }
     deshabilitarEvento(id: any) {
-      this.eventosService.deshabilitarCurso(id).subscribe((data: any) => {
+      this.eventosService.deshabilitarEvento(id).subscribe((data: any) => {
         // Swal.fire({
         //   title: 'Curso deshabilitado',
         //   text: 'Curso deshabilitado de manera correcta',

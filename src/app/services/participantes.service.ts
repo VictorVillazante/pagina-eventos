@@ -6,13 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ParticipantesService {
   editarPerfil(email: any, perfil: any): any {
-    return this.http.post<Object[]>("http://localhost:3000/registrar-alumno",{});
+    return this.http.put<Object[]>("http://localhost:3000/api/participantes",perfil);
   }
   obtenerPerfil(email: any) {
-    return this.http.post<Object[]>("http://localhost:3000/registrar-alumno",{});
+    return this.http.get<Object[]>("http://localhost:3000/api/participantes/perfil"+email);
   }
   registrarParticipante(participante:any) {
-    return this.http.post<Object[]>("http://localhost:3000/registrar-alumno",participante);
+    return this.http.post<Object[]>("http://localhost:3000/api/usuarios",participante);
   }
   constructor(private http:HttpClient) { }
 }

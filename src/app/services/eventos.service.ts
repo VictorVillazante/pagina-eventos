@@ -6,25 +6,25 @@ import { Injectable } from '@angular/core';
 })
 export class EventosService {
   obtenerMisEventos(email: any) {
-    return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos/");
+    return this.http.get<any[]>("http://localhost:3000/api/entradas/mis-eventos/"+email);
   }
   buscarEventoPorNombre(nombre: any) {
-    return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos/");
+    return this.http.get<any[]>("http://localhost:3000/api/eventos/buscar-nombre/"+nombre);
   }
   actualizarEvento(datosFormulario: any) {
-    return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos/");
+    return this.http.put<any[]>("http://localhost:3000/api/eventos",datosFormulario);
   }
-  deshabilitarCurso(id: any) {
-    return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos/"+id);
+  deshabilitarEvento(id: any) {
+    return this.http.put<any[]>("http://localhost:3000/api/eventos/deshabilitar/"+id,{});
   }
   habilitarEvento(id: any) {
-    return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos/"+id);
+    return this.http.put<any[]>("http://localhost:3000/api/eventos/habilitar/"+id,{});
   }
   obtenerEventossOrganizador(email: any) {
     return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos/"+email);
   }
   obtenerEventosAdm() {
-    return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos");
+    return this.http.get<any[]>("http://localhost:3000/api/eventos/");
   }
   obtenerUltimosEventos() {
     return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos");
