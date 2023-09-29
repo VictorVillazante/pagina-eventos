@@ -1,1 +1,49 @@
-<p>mi-perfil works!</p>
+<div class="container mt-5" id="perfil">
+  <form (ngSubmit)="editarPerfil()" #formulario="ngForm">
+    <div id="img_usuario" width="100" height="100">
+      <img
+        *ngIf="perfil.img_usuario === null"
+        src="../../../assets/images/imagen_usuario_defecto.jpg"
+        alt="Imagen perfil"
+        class="card-img-top"
+        alt="..."
+      />
+      <img
+        *ngIf="!perfil.img_usuario === null"
+        [src]="perfil.img_usuario"
+        alt="Imagen perfil"
+        class="card-img-top"
+        alt="..."
+      />
+      <i
+        id="imagen_perfil"
+        style="position: relative; left: 90px; top: -10px"
+        class="fa-sharp fa-solid fa-pen-to-square"
+      ></i>
+    </div>
+    <div class="profile-card" id="contenido_perfil">
+      <div class="mb-3">
+        <label for="nombres" class="form-label">Nombres</label>
+        <input
+          [(ngModel)]="perfil.nombres"
+          type="text"
+          class="form-control"
+          id="nombres"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="apellidos" class="form-label">Apelllidos</label>
+        <input
+          [(ngModel)]="perfil.apellidos"
+          type="text"
+          class="form-control"
+          id="apellidos"
+        />
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        Editar Perfil
+      </button>
+    </div>
+  </form>
+</div>
