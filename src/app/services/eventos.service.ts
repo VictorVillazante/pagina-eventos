@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EventosService {
+  buscarEventoPorNombre(nombre: any) {
+    return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos/");
+  }
   actualizarEvento(datosFormulario: any) {
     return this.http.get<any[]>("http://localhost:3000/api/eventos/ultimos-eventos/");
   }

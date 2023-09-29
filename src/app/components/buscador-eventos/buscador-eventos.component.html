@@ -1,1 +1,48 @@
-<p>buscador-eventos works!</p>
+<div class="container mt-5">
+  <div
+    class="evento-card-final"
+    *ngFor="let evento of eventos"
+    (click)="obtenerDetalleEvento(evento.id_evento)"
+  >
+    <img src="../../../assets/images/evento-hover.jpg" alt="" class="hover" />
+    <img
+      src="../../../assets/images/evento-sin-hover.png"
+      alt=""
+      class="sin-hover"
+    />
+
+    <div class="evento-card">
+      <div class="evento-card-aux card">
+        <h1
+          style="
+            color: #28888e !important;
+            font-size: 2.5rem;
+            letter-spacing: -0.03em;
+            font-weight: 500;
+          "
+        >
+          San Francisco
+        </h1>
+
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley
+        </p>
+        <h1 style="color: white !important; font-size: 1.6rem">
+          {{ evento.nombre_evento }}
+        </h1>
+        <h1
+          style="
+            color: white !important;
+            font-size: 1.4rem;
+            letter-spacing: -0.02em;
+          "
+        >
+          {{ evento.fecha }}
+        </h1>
+        <button>Ver detalle-></button>
+      </div>
+    </div>
+  </div>
+</div>
