@@ -17,7 +17,7 @@ const APP_ROUTES: Routes = [
     { path: 'mi-perfil', component:  MiPerfilComponent},
     { path: 'eventos', component:  EventosComponent},
     { path: 'eventos/registrar', component:  RegistrarEventosComponent},
-    { path: 'eventos/actualizar', component:  ActualizarEventosComponent},
+    { path: 'eventos/actualizar/:id', component:  ActualizarEventosComponent},
     { path: 'detalles-evento/:id', component:  DetallesEventoComponent},
     { path: 'mis-eventos', component:  MisEventosComponent},
     { path: 'buscador-eventos/:nombre', component:  BuscadorEventosComponent},

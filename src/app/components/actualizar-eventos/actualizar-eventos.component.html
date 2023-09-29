@@ -1,1 +1,47 @@
-<p>actualizar-eventos works!</p>
+<div class="container mt-5">
+  <h2>Actualizar Curso</h2>
+  <form (ngSubmit)="actualizarEvento()" #formulario="ngForm">
+    <div class="form-group">
+      <label for="id_evento">ID evento</label>
+      <input
+        [(ngModel)]="datosFormulario.id_evento"
+        type="text"
+        [disabled]="true"
+        class="form-control"
+        id="id_evento"
+        name="id_evento"
+        ngModel
+      />
+    </div>
+    <div class="form-group">
+        <label for="id_evento">Nombre evento</label>
+        <input
+          [(ngModel)]="datosFormulario.nombre_evento"
+          type="text"
+          class="form-control"
+          id="nombre_evento"
+          name="nombre_evento"
+          ngModel
+        />
+      </div>
+    <div class="form-group">
+      <label for="ponderacion">Espacio</label>
+      <select (change)="cambioEspacio($event)" name="" id="" [value]="espacios[0].id_espacio">
+        <option *ngFor="let espacio of espacios" [value]="espacio.id_espacio">{{espacio.nombre}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="fecha">Fecha</label>
+      <input
+        [(ngModel)]="datosFormulario.fecha"
+        type="date"
+        class="form-control"
+        id="fecha"
+        name="fecha"
+        ngModel
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar evento</button>
+  </form>
+</div>

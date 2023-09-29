@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registrar-eventos.component.css']
 })
 export class RegistrarEventosComponent implements OnInit {
+  datosFormulario:any={
 
+  };
   constructor() { }
 
   ngOnInit(): void {
